@@ -46,9 +46,9 @@
         var div = document.createElement('div');
         div.innerHTML = msg;
         warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 0px;';
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
         else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 0px;';
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
           setTimeout(function() {
             warningBanner.removeChild(div);
             updateBannerVisibility();
@@ -101,7 +101,7 @@
 		console.log('Width:  ' +  ((getHeight()-getHeight()*.1)*9/16) );
 		console.log('Height: ' +(getHeight()-getHeight()*.1) );
       }
-	  
+
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
@@ -111,7 +111,7 @@
           progressBarFull.style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
-                //fullscreenButton.onclick = () => {
+                 //fullscreenButton.onclick = () => {
                   //unityInstance.SetFullscreen(1);
                 //};
               }).catch((message) => {
@@ -120,6 +120,7 @@
             };
 
       document.body.appendChild(script);
+	  
 	  function getWidth() {
   return Math.max(
     document.body.scrollWidth,
@@ -139,6 +140,7 @@ function getHeight() {
     document.documentElement.clientHeight
   );
 }
+
     </script>
   </body>
 </html>
