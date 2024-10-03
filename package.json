@@ -1,5 +1,5 @@
 {
-  "name": "lumber-default",
+  "name": "lumber",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.21.0",
-    "node-telegram-bot-api": "^0.66.0",
-    "telegraf": "^4.16.3"
+    "node-telegram-bot-api": "^0.66.0"
   }
 }
