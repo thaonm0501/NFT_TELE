@@ -16,14 +16,13 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-       <!--<div id="unity-warning"> </div>
+ <!--<div id="unity-warning"> </div>
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">NFT</div>
       </div>
 	  -->
-    </div>
     <script>
 
       var container = document.querySelector("#unity-container");
@@ -58,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Lumber New.loader.js";
+      var loaderUrl = buildUrl + "/Lumber.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Lumber New.data",
-        frameworkUrl: buildUrl + "/Lumber New.framework.js",
-        codeUrl: buildUrl + "/Lumber New.wasm",
+        dataUrl: buildUrl + "/Lumber.data",
+        frameworkUrl: buildUrl + "/Lumber.framework.js",
+        codeUrl: buildUrl + "/Lumber.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "NFT",
@@ -92,8 +91,8 @@
         // config.devicePixelRatio = 1;
 
 
-      } 
-	   else {
+      }   
+	  else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
         canvas.style.width = ((getHeight()-getHeight()*.1)*9/16)+"px";
@@ -111,7 +110,7 @@
           progressBarFull.style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
-                 //fullscreenButton.onclick = () => {
+                //fullscreenButton.onclick = () => {
                   //unityInstance.SetFullscreen(1);
                 //};
               }).catch((message) => {
@@ -120,7 +119,6 @@
             };
 
       document.body.appendChild(script);
-	  
 	  function getWidth() {
   return Math.max(
     document.body.scrollWidth,
@@ -140,7 +138,6 @@ function getHeight() {
     document.documentElement.clientHeight
   );
 }
-
     </script>
   </body>
 </html>

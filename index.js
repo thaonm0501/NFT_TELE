@@ -1,15 +1,15 @@
 const express = require("express");
 const path = require("path");
 const TelegramBot = require("node-telegram-bot-api");
-const TOKEN = "7671593760:AAH8Y1ZLJXbOV8Qo9kcpcjm-cjgG1bm0dC8";
+const TOKEN = "7609848789:AAGMnOo0zI71AAoTOu_t6tc-gIP0Mavp6mQ";
 const server = express();
 const bot = new TelegramBot(TOKEN, {
     polling: true
 });
 const port = process.env.PORT || 5000;
-const gameName = "nft_telegame_bot";
+const gameName = "Lumber Cat 3D";
 const queries = {};
-server.use(express.static(path.join(__dirname, 'nft_telegame_bot')));
+server.use(express.static(path.join(__dirname, 'lumber_cat_3D_bot')));
 bot.onText(/help/, (msg) => bot.sendMessage(msg.from.id, "Say /game if you want to play."));
 bot.onText(/start|game/, (msg) => bot.sendGame(msg.from.id, gameName));
 bot.on("callback_query", function (query) {
